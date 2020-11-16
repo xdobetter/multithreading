@@ -38,7 +38,16 @@
 //     }
 //     return 0;
 // }
-
+/**
+ * @file dataSyns2.cpp
+ * @author dobetter (db.xi@zju.edu.cn)
+ * @brief 个人数据同步测试，希望阅读程序的你也能多多修改运行程序
+ * @version 0.1
+ * @date 2020-11-16
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
 #include<iostream>
 #include<thread>
 #include<mutex>

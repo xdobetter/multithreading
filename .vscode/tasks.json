@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "type":"shell",
+    "label":"g++",
+    "command": "g++",
+    "args": [
+        "-g",
+        "${file}",
+        "-Wall", // 开启额外警告
+        "-o",// 指定输出文件名，不加该参数则默认输出a.exe，Linux下默认a.out
+        //"-fexec-charset=GBK", // 生成的程序使用GBK编码，不加这条会导致Win下输出中文乱码；繁体系统改成BIG5，这条导致编译错误
+        "${fileBasenameNoExtension}.exe"
+    ], // 编译命令参数
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+        ],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    },
+    "presentation": {
+        "echo": true,
+        "reveal": "always",// 执行任务时是否跳转到终端面板，可以为always，silent，never。具体参见VSC的文档
+        "focus": false, // 设为true后可以使执行task时焦点聚集在终端，但对编译C/C++来说，设为true没有意义
+        "panel": "shared", //这里shared表示共享，改成new之后每个进程创建新的端口
+        "showReuseMessage": true,
+        "clear": false
+    }
+}

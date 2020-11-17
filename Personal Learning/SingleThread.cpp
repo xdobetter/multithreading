@@ -8,6 +8,7 @@
  * @copyright Copyright (c) 2020
  * 
  */
+#include <thread>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -31,6 +32,7 @@ int GetSum(vector<int>::iterator first, vector<int>::iterator last)
  */
 int main()
 {
+    std::thread t(largeArrays.begin(), largeArrays.end()));
     vector<int> largeArrays;
     for (int i = 0; i < 10000000; i++)
     {

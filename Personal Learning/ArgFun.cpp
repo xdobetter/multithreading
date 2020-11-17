@@ -6,11 +6,11 @@
  * @date 2020-11-12
  * 
  * @copyright Copyright (c) 2020
- * 
+ *
  */
 #include<thread>
 #include<iostream>
-#include<mutex>
+//#include<mutex>
 int msum(int a,int b){
     int c=a+b;
     std::cout<<a<<"+"<<b<<"="<<c<<std::endl;
@@ -24,7 +24,7 @@ int main()
     t1.join();
 
     //主线程代码
-    std::cout<<"Main here"<<std::endl;
 
+    std::cout<<"Main here"<<std::endl;
     return 0;
 }

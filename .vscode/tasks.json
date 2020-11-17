@@ -5,6 +5,7 @@
     "command": "g++",
     "args": [
         "-g",
+        "-pthread",
         "${file}",
         "-Wall", // 开启额外警告
         "-o",// 指定输出文件名，不加该参数则默认输出a.exe，Linux下默认a.out
